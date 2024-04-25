@@ -2569,6 +2569,7 @@ html{
     background: #27ae60;
     padding: 0.7rem;
     transition: .3s;
+    border-radius: 0 0 .4rem .4rem;
 }
 .user_ragister .visitor_bottom:hover{
     background: #12a04d;
@@ -2581,6 +2582,7 @@ html{
     background: #ffb445;
     padding: 0.7rem;
     transition: .3s;
+    border-radius: 0 0 .4rem .4rem;
 }
 .uniq_visitor .visitor_bottom:hover{
     background: #F79F1F;
@@ -2619,11 +2621,12 @@ html{
     padding: 1rem;
     margin-bottom: 0;
     border-radius: .4rem .4rem 0 0;
+    border-bottom: 1px solid var(--yellow);
 }
 .liveHtrxt{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    color: var(--yellow);
+    color: var(--white);
 }
 .live_body img{
     border-radius: 0 0 .4rem .4rem;
