@@ -47,13 +47,14 @@
                                     <span class="menu_text">Dahsboard</span>
                                 </a>
                             </li>
+
                             <!-- Service -->
                             <li class="nav-item sub_manu_main" role="presentation">
 
                                 <!-- Sub menu -->
                                 <div class="sub_menu_head nav-link_aside">
                                     <div class="menu_head_left">
-                                        <i class="fa-sharp fa-solid fa-bars"></i>
+                                        <i class="left_i fa-brands fa-servicestack"></i>
                                         <p class="sub_head_text">Service</p>
                                     </div>
                                     <i class="right_icon_sub fa-solid fa-chevron-down"></i>
@@ -72,7 +73,7 @@
 
                             <!-- Gallery -->
                             <li class="nav-item" role="presentation">
-                                <a href="index.html" class="nav-link_aside">
+                                <a href="gallery.html" class="nav-link_aside">
                                     <i class="left_i fa-solid fa-image"></i>
                                     <span class="menu_text">Gallery</span>
                                 </a>
@@ -80,7 +81,7 @@
 
                             <!-- Task -->
                             <li class="nav-item" role="presentation">
-                                <a href="task_upload.html" class="nav-link_aside">
+                                <a href="task_upload.html" class="nav-link_aside active">
                                     <i class="left_i fa-solid fa-database fa-fw"></i>
                                     <span class="menu_text">Task Upload</span>
                                 </a>
@@ -103,15 +104,15 @@
                                         <i class="fa-sharp fa-solid fa-bars"></i>
                                         <p class="sub_head_text">Curriculam</p>
                                     </div>
-                                    <i class="right_icon_sub fa-solid fa-chevron-down"></i>
+                                    <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                                 <ul class="sub_menu_list">
-                                    <li class="sub_item nav-item"><a href="curriculam_upload.html" class="sub_link nav-link_aside active">
-                                        <i class="left_i fa-solid fa-upload"></i>
+                                    <li class="sub_item nav-item"><a href="curriculam_upload.html" class="sub_link nav-link_aside">
+                                        <i class="fa-solid fa-upload"></i>
                                         Curriculam upload
                                     </a></li>
-                                    <li class="sub_item nav-item"><a href="curriculam_view.html" class="sub_link nav-link_aside">
-                                        <i class="left_i fa-solid fa-list"></i>
+                                    <li class="sub_item nav-item"><a href="curriculam_view.html" class="sub_link nav-link_aside active">
+                                        <i class="fa-solid fa-list"></i>
                                         Curriculam view
                                     </a></li>
                                 </ul>
@@ -158,7 +159,7 @@
                 </div>
 
                 <!--------- Main body ----------------->
-                <!----------------- course Content ------------>
+                <!----------------- Symptom Content ------------>
                 <div class="main_content">
                     <div class="main">
                         <div class="content_inner">
@@ -167,12 +168,12 @@
                             <div class="hospital_header_main">
                                     <div class="hospital_content_header symtomp_header">
                                         <button class="offcanvas_toggle_btn d-lg-none" data-bs-target="#myoffcanvas" data-bs-toggle="offcanvas"><i class="fa-solid fa-bars"></i></button>
-                                        <!-- <div class="hospital_search symtomp_h_form_div">
-                                            <form action="#">
+                                        <div class="hospital_search symtomp_h_form_div">
+                                            <!-- <form action="#" class="header_search_form">
                                                 <input class="symptom_search" type="search" placeholder="search">
                                                 <button class="symptom_search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                            </form>
-                                        </div> -->
+                                            </form> -->
+                                        </div>
                                         <!-- Profile -->
                                         <div class="hospital_profile">
                                             <!-- <button class="symptom_search_btn_profile"><i class="fa-solid fa-magnifying-glass"></i></button> -->
@@ -187,44 +188,50 @@
                                 </div>
                             
                                 
-                            <!-- course Body -->
+                            <!-- Gallery Body -->
                             <div class="gallery_main">
                                 <div class="gallery_inner">
 
-                                    <h1 class="title_main my-2">curriculam upload</h1>
+                                    <h1 class="title_main my-2">Task Upolad</h1>
 
-                                    <!-- course upload form -->
+                                    <!-- Image upload form -->
                                     <form action="#" class="gallery_upload_form">
-                                        <p class="p_header_top">Curriculam upload form</p>
+                                        <p class="p_header_top">Task upload form</p>
                                         <div class="gallery_id gFormInner">
-                                            <label for="Clid" class="gForm_label">Class id:</label>
-                                            <input type="text" class="Gid" id="Clid">
+                                            <label for="tid" class="gForm_label">Task id:</label>
+                                            <input type="text" class="tid" id="tid">
                                         </div>
                                         <div class="gallery_name gFormInner">
-                                            <label for="Cno." class="gForm_label">Class number:</label>
-                                            <input type="text" class="Gtitle" id="Cno.">
+                                            <label for="Ttitle" class="gForm_label">Task name:</label>
+                                            <input type="text" class="Ttitle" id="Ttitle">
                                         </div>
                                         <div class="gallery_name gFormInner">
-                                            <label for="Cprice" class="gForm_label">Topic 1:</label>
-                                            <input type="text" class="Gtitle" id="Cprice">
+                                            <label for="Ttitle" class="gForm_label">Employer:</label>
+                                            <input type="text" class="Ttitle" id="Ttitle">
                                         </div>
                                         <div class="gallery_name gFormInner">
-                                            <label for="Cprice" class="gForm_label">Topic 2:</label>
-                                            <input type="text" class="Gtitle" id="Cprice">
+                                            <label for="TD" class="gForm_label">Task details:</label>
+                                            <input type="text" class="TD" id="TD">
                                         </div>
                                         <div class="gallery_name gFormInner">
-                                            <label for="Cprice" class="gForm_label">Topic 3:</label>
-                                            <input type="text" class="Gtitle" id="Cprice">
+                                            <label for="TAB" class="gForm_label">Assigned by:</label>
+                                            <input type="text" class="TAB" id="TAB">
                                         </div>
-                                        
+                                        <div class="gallery_name gFormInner">
+                                            <label for="TPL" class="gForm_label">Priority:</label>
+                                            <select name="#" class="TPL" id="TPL">
+                                                  <option value="select" selected>Priority Select</option>
+                                                  <option value="first">First priority</option>
+                                                  <option value="second">Second priority</option>
+                                                  <option value="third">Third priority</option>
+                                                  <option value="fourth">Fourth priority</option>
+                                            </select>
+                                        </div>
                                         <div class="form_submit_div">
                                             <button type="submit" class="GformSubmit btn_blue">Submit</button>                        
-                                            <button type="reset" class="GformSubmit btn_light">+</button>                                                         
-                                            <button type="reset" class="GformSubmit btn_light">-</button>                                                         
+                                            <button type="reset" class="GformSubmit btn_yellow">Submit</button>                                                         
                                         </div>
                                     </form>
-
-                                    
                                 </div>
                             </div>
                         </div>

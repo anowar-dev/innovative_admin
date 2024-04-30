@@ -27,10 +27,14 @@ html{
     --light_white: #FEF8EF;
     --light_black: #45464E;
     --black30: #303030;
+    --black40: #404040;
     --black: #000000;
     --yellow: #FFCA00;
     --parpal: #E40AFF;
     --red: #FD4954;
+    --bEvent: #2d2e34;
+    --bOdd: #353639;
+    --blackish: #999;
 }
 .p_content_bold{
     font-size: 20px;
@@ -2263,7 +2267,18 @@ html{
     border-radius: .5rem;
     border: 1px solid var(--blue);
 }
+.gFormInner select{
+    display: block;
+    width: 100%;
+    padding: 0.4rem;
+    outline-color: var(--parpal);
+    border-radius: .5rem;
+    border: 1px solid var(--blue);
+}
 .gFormInner input:focus{
+    border: .1rem solid var(--parpal);
+}
+.gFormInner select:focus{
     border: .1rem solid var(--parpal);
 }
 .gFormInner label{
@@ -2289,6 +2304,7 @@ html{
     padding-left: 9rem;
     column-gap: 1rem;
     width: 100%;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 .btn_yellow{
@@ -2500,18 +2516,27 @@ html{
     border-radius: .2rem;
     padding: 2px 0;
 }
-
+.currilamLhead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+    background: var(--blue);
+    border-radius: .5rem .5rem 0 0;
+}
 /*============ Gallery page end ================*/
 
 /*======== Dashboard design start ===========*/
 .visitors_main{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 2%;
 }
 .visitor_inner{
     border-radius: .4rem;
     transition: .3s;
+    width: 32%;
 }
 .visitor_inner:hover .visitor_icon i{
     font-size: 3.5rem;
@@ -2660,6 +2685,227 @@ html{
     font-weight: 600;
     color: var(--white);
 }
+
+/* Todos */
+.todos_main .todos_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 2%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.todos_inner .todo_left{
+    width: 49%;
+    border-radius: .4rem;
+}
+.todos_inner .todo_right{
+    width: 49%;
+    border-radius: .4rem;
+}
+.todo_right .task_head{
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 1rem;
+    padding: 1rem;
+    border-radius: .4rem .4rem 0 0;
+    border-bottom: 1px solid var(--light_black);
+}
+.todo_left .task_head{
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 1rem;
+    padding: 1rem;
+    border-radius: .4rem .4rem 0 0;
+    border-bottom: 1px solid var(--light_black);
+}
+.task_head i{
+    color: var(--light_white);
+    font-size: 1.5rem;
+}
+.taskHeadContent{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--yellow);
+    margin-bottom: 0;
+}
+.worker_img img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: .4rem;
+    border: 1px solid var(--white);
+}
+.massage_img img{
+    width: 2.7rem;
+    height: 2.5rem;
+    border-radius: .4rem;
+    border: 1px solid var(--white);
+}
+.todo_left .task_body{
+    background: var(--blackish);
+    border-radius: 0 0 .4rem .4rem;
+    padding: 1rem 0;
+    height: 445px;
+    overflow-y: auto;
+}
+.todo_right .task_body{
+    background: var(--blackish);
+    padding: 1rem 0;
+    height: 400px;
+    overflow-y: auto;
+}
+.task_single{
+    background: var(--black30);
+    border-radius: .4rem;
+    margin: 0.5rem;
+}
+.assine_to{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 1rem;
+    padding: 1rem;
+    margin-bottom: -1rem;
+}
+.worker_name{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--yellow);
+    margin-bottom: 0;
+}
+.worker_designation{
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--white);
+    opacity: .8;
+}
+.task_list_group{
+    background: var(--black40);
+    padding: .5rem;
+    border-radius: 0 0 .4rem .4rem;
+}
+.form-check{
+    width: fit-content;
+}
+.task_item .tasks{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.task_name{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0;
+}
+.task_details{
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--white);
+    opacity: .5;
+    margin-bottom: 0.2rem;
+}
+.asigned_indicate{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white);
+    opacity: .8;
+}
+.assigner_name{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white);
+}
+.assigned_by{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: .5rem;
+}
+.assigned_by p{
+    margin-bottom: 0;
+}
+.task_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 1rem;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+}
+
+.tasksDelete{
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: .8rem;
+}
+.tasksEdit{
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: .8rem;
+    margin-right: 0.5rem;
+}
+
+/* Chating */
+.massage_body .task_single{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 1rem;
+}
+.massage_text{
+    width: fit-content;
+    margin-left: auto;
+}
+.massages_text_inner{
+    font-size: 0.9rem;
+    background: var(--blue);
+    color: var(--white);
+    font-weight: 400;
+    padding: 1rem;
+    border-radius: 0 2rem 2rem 2rem;
+    margin-bottom: 0;
+}
+.replay .massages_text_inner{
+    border-radius: 2rem 0 2rem 2rem;
+}
+.massage_single{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: .5rem;
+    margin: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.massager_date{
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding-left: 1rem;
+}
+.replay .massager_date{
+    text-align: right;
+    padding-right: 1rem;
+}
+.admin_chat_footer{
+    margin-top: 5px;
+}
+.admin_chat_footer .write_massage{
+    outline: none;
+    border: 1px solid var(--blue);
+    padding: 0.5rem;
+    width: 98%;
+    border-radius: .5rem;
+}
+.admin_chat_footer .write_massage:focus{
+    border-color: var(--parpal);
+}
+
 /*======== Dashboard design end ===========*/
 
 

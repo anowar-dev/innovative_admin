@@ -78,6 +78,14 @@
                                 </a>
                             </li>
 
+                            <!-- Task -->
+                            <li class="nav-item" role="presentation">
+                                <a href="task_upload.html" class="nav-link_aside">
+                                    <i class="left_i fa-solid fa-database fa-fw"></i>
+                                    <span class="menu_text">Task Upload</span>
+                                </a>
+                            </li>
+
                             <!-- Course -->
                             <li class="nav-item" role="presentation">
                                 <a href="course.html" class="nav-link_aside">
@@ -185,43 +193,13 @@
 
                                     <h1 class="title_main my-2">Courses</h1>
 
-                                    <!-- course upload form -->
-                                    <form action="#" class="gallery_upload_form">
-                                        <p class="p_header_top">Course upload form</p>
-                                        <div class="gallery_id gFormInner">
-                                            <label for="Cid" class="gForm_label">course id:</label>
-                                            <input type="text" class="Gid" id="Cid">
-                                        </div>
-                                        <div class="gallery_name gFormInner">
-                                            <label for="Ctitle" class="gForm_label">Course name:</label>
-                                            <input type="text" class="Gtitle" id="Ctitle">
-                                        </div>
-                                        <div class="gallery_name gFormInner">
-                                            <label for="Cprice" class="gForm_label">Course price:</label>
-                                            <input type="text" class="Gtitle" id="Cprice">
-                                        </div>
-                                        <div class="gallery_name gFormInner">
-                                            <label for="Ccontity" class="gForm_label">Class contity:</label>
-                                            <input type="text" class="Gtitle" id="Ccontity">
-                                        </div>
-                                        <div class="gallery_img ">
-                                            <div class="gallery_img_iiner gFormInner">
-                                                <label for="Gimg" class="gForm_label">Image:</label>
-                                                <input type="file" class="Gimg" id="Gimg">
-                                            </div>
-                                            <div class="gallery_img_note">
-                                                <p class="admin_form_note">Image size will be 430px*750px</p>
-                                            </div>
-                                        </div>
-                                        <div class="form_submit_div">
-                                            <button type="submit" class="GformSubmit btn_blue">Submit</button>                        
-                                            <button type="reset" class="GformSubmit btn_yellow">Submit</button>                                                         
-                                        </div>
-                                    </form>
 
                                     <!-- Image showing table -->
                                     <div class="img_show_admin">
-                                        <p class="p_header_top">Course listing table</p>
+                                        <div class="currilamLhead">
+                                            <p class="p_header_top">Curriculam listing table</p>
+                                            <p class="p_header_top">Course name</p>
+                                        </div>
                                         <div class="img_show_aHeader">
                                             <div class="show_aHeader_left">
                                                 <p class="small_text">Show</p>
@@ -237,7 +215,7 @@
                                                     <option value="9">9</option>
                                                     <option value="10">10</option>
                                                 </select>
-                                                <p class="small_text">images</p>
+                                                <p class="small_text">topics</p>
                                             </div>
                                             <div class="show_aHeader_right">
                                                 <input type="text" id="searchInput" class="form-control" placeholder="Search...">
@@ -246,11 +224,9 @@
                                         <table class="img_showing_table">
                                             <thead class="img_tHead">
                                                 <tr class="img_th_row">
-                                                    <th class="img_th_inner py-2">Id:</th>
-                                                    <th class="img_th_inner py-2">Name</th>
-                                                    <th class="img_th_inner py-2">Price</th>
-                                                    <th class="img_th_inner py-2">Clases</th>
-                                                    <th class="img_th_inner py-2">Image</th>
+                                                    <th class="img_th_inner py-2">Topic Id:</th>
+                                                    <th class="img_th_inner py-2">Class no.</th>
+                                                    <th class="img_th_inner py-2">Topic Name</th>
                                                     <th class="img_th_inner py-2">Action</th>
                                                 </tr>
                                             </thead>
@@ -259,10 +235,8 @@
                                                 <!-- Single row of img view -->
                                                 <tr class="img_tb_row">
                                                     <th class="img_th_inner">1</th>
-                                                    <td class="img_tb_data">Course CV</td>
-                                                    <td class="img_tb_data">500tk</td>
-                                                    <td class="img_tb_data">40 clases</td>
-                                                    <td class="img_tb_data"><img src="./asset/images/hospitals/BSHL1.webp" alt=""></td>
+                                                    <td class="img_tb_data">1</td>
+                                                    <td class="img_tb_data">Course introduction</td>
                                                     <td class="img_tb_data action">
 
                                                         <!-- Edit button -->
@@ -343,14 +317,12 @@
                                                 <!-- Single row of img view -->
                                                 <tr class="img_tb_row">
                                                     <th class="img_th_inner">2</th>
-                                                    <td class="img_tb_data">Course ML</td>
-                                                    <td class="img_tb_data">500tk</td>
-                                                    <td class="img_tb_data">40 clases</td>
-                                                    <td class="img_tb_data"><img src="./asset/images/hospitals/BSHL1.webp" alt=""></td>
+                                                    <td class="img_tb_data">1</td>
+                                                    <td class="img_tb_data">Environment setup</td>
                                                     <td class="img_tb_data action">
 
-                                                        <!-- Edit btn -->
-                                                        <button class="admin_edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                                        <!-- Edit button -->
+                                                        <button class="admin_edit" id="Gedit_1"><i class="fa-solid fa-pen-to-square"></i></button>
                                                         <!-- Edit modal -->
                                                         <div class="Agallery_modal">
                                                             <div class="Agallery_modal_inner">
@@ -377,8 +349,8 @@
                                                                         <input type="text" class="form-control" id="exampleInputEmailp" aria-describedby="emailHelp">
                                                                     </div>
                                                                     <div class="mb-3">
-                                                                        <label for="exampleInputEmail3" class="form-label">Class contity</label>
-                                                                        <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp">
+                                                                        <label for="exampleInputEmailc" class="form-label">Class contity</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmailc" aria-describedby="emailHelp">
                                                                     </div>
                                                                     <div class="mb-3">
                                                                         <label for="exampleInputPassword1" class="form-label">Image upload</label>
@@ -406,7 +378,7 @@
                                                                 <div class="Agallery_modal_body">
                                                                     <form>
                                                                     <div class="mb-3">
-                                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="Course ID" disabled>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="course ID" disabled>
                                                                     </div>
                                                                     <div class="mb-3">
                                                                         <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="Course name" disabled>
@@ -420,32 +392,335 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                     </td>
                                                 </tr>
 
                                                 <!-- Single row of img view -->
                                                 <tr class="img_tb_row">
                                                     <th class="img_th_inner">3</th>
-                                                    <td class="img_tb_data">Course CV</td>
-                                                    <td class="img_tb_data">500tk</td>
-                                                    <td class="img_tb_data">40 clases</td>
-                                                    <td class="img_tb_data"><img src="./asset/images/hospitals/BSHL1.webp" alt=""></td>
+                                                    <td class="img_tb_data">1</td>
+                                                    <td class="img_tb_data">Run a python code</td>
                                                     <td class="img_tb_data action">
-                                                        <button class="admin_edit"><i class="fa-solid fa-pen-to-square"></i></button>
+
+                                                        <!-- Edit button -->
+                                                        <button class="admin_edit" id="Gedit_1"><i class="fa-solid fa-pen-to-square"></i></button>
+                                                        <!-- Edit modal -->
+                                                        <div class="Agallery_modal">
+                                                            <div class="Agallery_modal_inner">
+
+                                                                <!-- Modal header -->
+                                                                <div class="Agallery_modal_header">
+                                                                    <h3 class="AGMH p_header_top">Edit course title</h3>
+                                                                    <button class="AGMclose"><i class="fa-solid fa-xmark"></i></button>
+                                                                </div>
+
+                                                                <!-- MOdal body -->
+                                                                <div class="Agallery_modal_body">
+                                                                    <form>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmail1" class="form-label">Course ID</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmail" class="form-label">Course name</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmailp" class="form-label">Course price</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmailp" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmailc" class="form-label">Class contity</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmailc" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputPassword1" class="form-label">Image upload</label>
+                                                                        <input type="file" class="form-control" id="exampleInputPassword1">
+                                                                    </div>
+                                                                    <button type="submit" class="btn btn_blue AGMS">Submit</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Delete button -->
                                                         <button class="admin_delete"><i class="fa-solid fa-trash"></i></button>
+                                                        <!-- Delete notify modal -->
+                                                        <div class="Agallery_modal">
+                                                            <div class="Agallery_modal_inner">
+
+                                                                <!-- Modal header -->
+                                                                <div class="Agallery_modal_header">
+                                                                    <h3 class="AGMH p_header_top">Do you wat to delete?</h3>
+                                                                    <button class="AGMclose"><i class="fa-solid fa-xmark"></i></button>
+                                                                </div>
+
+                                                                <!-- MOdal body -->
+                                                                <div class="Agallery_modal_body">
+                                                                    <form>
+                                                                    <div class="mb-3">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="course ID" disabled>
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="Course name" disabled>
+                                                                    </div>
+                                                                    
+                                                                    <div class="Dmodal_close_div">
+                                                                        <button type="submit" class="btn btn_light AGMC">Close</button>
+                                                                        <button type="submit" class="btn btn_red AGMD">Delete</button>
+                                                                    </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                     </td>
                                                 </tr>
 
                                                 <!-- Single row of img view -->
                                                 <tr class="img_tb_row">
                                                     <th class="img_th_inner">4</th>
-                                                    <td class="img_tb_data">Course CV</td>
-                                                    <td class="img_tb_data">500tk</td>
-                                                    <td class="img_tb_data">40 clases</td>
-                                                    <td class="img_tb_data"><img src="./asset/images/hospitals/BSHL1.webp" alt=""></td>
+                                                    <td class="img_tb_data">1</td>
+                                                    <td class="img_tb_data">Assignment</td>
                                                     <td class="img_tb_data action">
-                                                        <button class="admin_edit"><i class="fa-solid fa-pen-to-square"></i></button>
+
+                                                        <!-- Edit button -->
+                                                        <button class="admin_edit" id="Gedit_1"><i class="fa-solid fa-pen-to-square"></i></button>
+                                                        <!-- Edit modal -->
+                                                        <div class="Agallery_modal">
+                                                            <div class="Agallery_modal_inner">
+
+                                                                <!-- Modal header -->
+                                                                <div class="Agallery_modal_header">
+                                                                    <h3 class="AGMH p_header_top">Edit course title</h3>
+                                                                    <button class="AGMclose"><i class="fa-solid fa-xmark"></i></button>
+                                                                </div>
+
+                                                                <!-- MOdal body -->
+                                                                <div class="Agallery_modal_body">
+                                                                    <form>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmail1" class="form-label">Course ID</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmail" class="form-label">Course name</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmailp" class="form-label">Course price</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmailp" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmailc" class="form-label">Class contity</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmailc" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputPassword1" class="form-label">Image upload</label>
+                                                                        <input type="file" class="form-control" id="exampleInputPassword1">
+                                                                    </div>
+                                                                    <button type="submit" class="btn btn_blue AGMS">Submit</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Delete button -->
                                                         <button class="admin_delete"><i class="fa-solid fa-trash"></i></button>
+                                                        <!-- Delete notify modal -->
+                                                        <div class="Agallery_modal">
+                                                            <div class="Agallery_modal_inner">
+
+                                                                <!-- Modal header -->
+                                                                <div class="Agallery_modal_header">
+                                                                    <h3 class="AGMH p_header_top">Do you wat to delete?</h3>
+                                                                    <button class="AGMclose"><i class="fa-solid fa-xmark"></i></button>
+                                                                </div>
+
+                                                                <!-- MOdal body -->
+                                                                <div class="Agallery_modal_body">
+                                                                    <form>
+                                                                    <div class="mb-3">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="course ID" disabled>
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="Course name" disabled>
+                                                                    </div>
+                                                                    
+                                                                    <div class="Dmodal_close_div">
+                                                                        <button type="submit" class="btn btn_light AGMC">Close</button>
+                                                                        <button type="submit" class="btn btn_red AGMD">Delete</button>
+                                                                    </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+
+                                                <!-- Single row of img view -->
+                                                <tr class="img_tb_row">
+                                                    <th class="img_th_inner">5</th>
+                                                    <td class="img_tb_data">2</td>
+                                                    <td class="img_tb_data">Conditional Statement</td>
+                                                    <td class="img_tb_data action">
+
+                                                        <!-- Edit button -->
+                                                        <button class="admin_edit" id="Gedit_1"><i class="fa-solid fa-pen-to-square"></i></button>
+                                                        <!-- Edit modal -->
+                                                        <div class="Agallery_modal">
+                                                            <div class="Agallery_modal_inner">
+
+                                                                <!-- Modal header -->
+                                                                <div class="Agallery_modal_header">
+                                                                    <h3 class="AGMH p_header_top">Edit course title</h3>
+                                                                    <button class="AGMclose"><i class="fa-solid fa-xmark"></i></button>
+                                                                </div>
+
+                                                                <!-- MOdal body -->
+                                                                <div class="Agallery_modal_body">
+                                                                    <form>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmail1" class="form-label">Course ID</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmail" class="form-label">Course name</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmailp" class="form-label">Course price</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmailp" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmailc" class="form-label">Class contity</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmailc" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputPassword1" class="form-label">Image upload</label>
+                                                                        <input type="file" class="form-control" id="exampleInputPassword1">
+                                                                    </div>
+                                                                    <button type="submit" class="btn btn_blue AGMS">Submit</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Delete button -->
+                                                        <button class="admin_delete"><i class="fa-solid fa-trash"></i></button>
+                                                        <!-- Delete notify modal -->
+                                                        <div class="Agallery_modal">
+                                                            <div class="Agallery_modal_inner">
+
+                                                                <!-- Modal header -->
+                                                                <div class="Agallery_modal_header">
+                                                                    <h3 class="AGMH p_header_top">Do you wat to delete?</h3>
+                                                                    <button class="AGMclose"><i class="fa-solid fa-xmark"></i></button>
+                                                                </div>
+
+                                                                <!-- MOdal body -->
+                                                                <div class="Agallery_modal_body">
+                                                                    <form>
+                                                                    <div class="mb-3">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="course ID" disabled>
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="Course name" disabled>
+                                                                    </div>
+                                                                    
+                                                                    <div class="Dmodal_close_div">
+                                                                        <button type="submit" class="btn btn_light AGMC">Close</button>
+                                                                        <button type="submit" class="btn btn_red AGMD">Delete</button>
+                                                                    </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+
+                                                <!-- Single row of img view -->
+                                                <tr class="img_tb_row">
+                                                    <th class="img_th_inner">6</th>
+                                                    <td class="img_tb_data">2</td>
+                                                    <td class="img_tb_data">Assignment</td>
+                                                    <td class="img_tb_data action">
+
+                                                        <!-- Edit button -->
+                                                        <button class="admin_edit" id="Gedit_1"><i class="fa-solid fa-pen-to-square"></i></button>
+                                                        <!-- Edit modal -->
+                                                        <div class="Agallery_modal">
+                                                            <div class="Agallery_modal_inner">
+
+                                                                <!-- Modal header -->
+                                                                <div class="Agallery_modal_header">
+                                                                    <h3 class="AGMH p_header_top">Edit course title</h3>
+                                                                    <button class="AGMclose"><i class="fa-solid fa-xmark"></i></button>
+                                                                </div>
+
+                                                                <!-- MOdal body -->
+                                                                <div class="Agallery_modal_body">
+                                                                    <form>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmail1" class="form-label">Course ID</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmail" class="form-label">Course name</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmailp" class="form-label">Course price</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmailp" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmailc" class="form-label">Class contity</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmailc" aria-describedby="emailHelp">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputPassword1" class="form-label">Image upload</label>
+                                                                        <input type="file" class="form-control" id="exampleInputPassword1">
+                                                                    </div>
+                                                                    <button type="submit" class="btn btn_blue AGMS">Submit</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Delete button -->
+                                                        <button class="admin_delete"><i class="fa-solid fa-trash"></i></button>
+                                                        <!-- Delete notify modal -->
+                                                        <div class="Agallery_modal">
+                                                            <div class="Agallery_modal_inner">
+
+                                                                <!-- Modal header -->
+                                                                <div class="Agallery_modal_header">
+                                                                    <h3 class="AGMH p_header_top">Do you wat to delete?</h3>
+                                                                    <button class="AGMclose"><i class="fa-solid fa-xmark"></i></button>
+                                                                </div>
+
+                                                                <!-- MOdal body -->
+                                                                <div class="Agallery_modal_body">
+                                                                    <form>
+                                                                    <div class="mb-3">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="course ID" disabled>
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="Course name" disabled>
+                                                                    </div>
+                                                                    
+                                                                    <div class="Dmodal_close_div">
+                                                                        <button type="submit" class="btn btn_light AGMC">Close</button>
+                                                                        <button type="submit" class="btn btn_red AGMD">Delete</button>
+                                                                    </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                     </td>
                                                 </tr>
                                             </tbody>
